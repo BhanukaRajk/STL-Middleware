@@ -5,7 +5,7 @@ import Login from "../src/pages/Login.jsx"
 const routes = [
 	{
 		path: "/",
-		element: <div>Landing</div>,
+		element: <div className="text-red-400">Landing</div>,
 	},
 	{
 		path: "/login",
