@@ -1,0 +1,20 @@
+import React from 'react'
+import { Progress } from 'antd';
+
+const ProgressSet = ({ precent, all, save, title }) => {
+    const twoColors = {
+        '0%': '#001F54',
+        '100%': '#001F54',
+    };
+    return (
+        <div className='flex flex-col my-2'>
+            <div className='flex justify-between'>
+                <h1>{title}</h1>
+                <h2 className='text-[#001F54]'>{save} / {all} GB</h2>
+            </div>
+            <Progress percent={precent} strokeColor={twoColors} />
+        </div>
+    )
+}
+
+export default ProgressSet
