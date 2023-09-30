@@ -1,11 +1,12 @@
 // Path: frontend/src/router.js
 import { createBrowserRouter } from "react-router-dom";
-import Login from "../src/pages/Login.jsx"
-import VerifyPhoneNumber from "../src/pages/VerifyPhoneNumber.jsx"
-import VerifyOTP from "../src/pages/VerifyOTP.jsx"
-import VerifyNewPassword from "../src/pages/VerifyNewPassword.jsx"
-import SignUp from "../src/pages/SignUp.jsx"
+import Login from "../src/pages/Login.jsx";
+import VerifyPhoneNumber from "../src/pages/VerifyPhoneNumber.jsx";
+import VerifyOTP from "../src/pages/VerifyOTP.jsx";
+import VerifyNewPassword from "../src/pages/VerifyNewPassword.jsx";
+import SignUp from "../src/pages/SignUp.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import LoginLayout from "./layouts/LoginLayout.jsx";
 
 const routes = [
 	{
@@ -14,28 +15,34 @@ const routes = [
 	},
 	{
 		path: "/login",
-		element: <Login />
+		element: <Login />,
 	},
 	{
 		path: "/sign-up",
-		element: <SignUp />
+		element: <SignUp />,
 	},
 	{
 		path: "/forgot-password/verify-number",
-		element: <VerifyPhoneNumber />
+		element: <VerifyPhoneNumber />,
 	},
 	{
 		path: "/forgot-password/verify-otp",
-		element: <VerifyOTP />
+		element: <VerifyOTP />,
 	},
 	{
 		path: "/forgot-password/verify-new-password",
-		element: <VerifyNewPassword />
+		element: <VerifyNewPassword />,
 	},
 	{
 		path: "/dashboard",
-		element: <Dashboard />,
-	}
+		element: <LoginLayout />,
+		children: [
+			{
+				path: "",
+				element: <Dashboard />,
+			},
+		],
+	},
 ];
 
 const router = createBrowserRouter(routes);
