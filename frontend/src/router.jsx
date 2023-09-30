@@ -33,7 +33,6 @@ const routes = [
 		element: <VerifyNewPassword />
 	},
 	{
-
 		path: "/dashboard",
 		element: <Dashboard />,
 	}

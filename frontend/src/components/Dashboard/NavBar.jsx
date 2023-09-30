@@ -4,15 +4,15 @@ import { FaBars } from 'react-icons/fa'
 
 const NavBar = () => {
     return (
-        <nav className='flex sticky top-0 z-50 justify-between py-6 bg-gray-100 rounded-es-2xl rounded-ee-2xl text-[#001F54] shadow-lg'>
-            <div className='py-1 px-6 font-bold select-none'>
+        <nav className='flex sticky top-0 z-50 justify-between bg-cover py-6 bg-[url("/src/assets/images/backgrounds/nav-background.png")] bg-opacity-10 rounded-es-2xl rounded-ee-2xl text-white shadow-lg'>
+            <div className='py-1 px-6 font-bold text-lg select-none'>
                 SRI CARE
             </div>
             <div className='flex'>
-                <div className='p-2 hover:bg-[#001F54] rounded-xl mx-4 hover:text-white text-[#001F54] transition-all'>
+                <div className='p-2 hover:bg-white/10 rounded-xl mx-4 text-white transition-all'>
                     <IoNotificationsSharp className='text-lg' />
                 </div>
-                <div className='p-2 hover:bg-[#001F54]  rounded-xl mx-4 hover:text-white text-[#001F54] transition-all'>
+                <div className='p-2 hover:bg-white/10  rounded-xl mx-4 text-white transition-all'>
                     <FaBars className='text-lg' />
                 </div>
             </div>

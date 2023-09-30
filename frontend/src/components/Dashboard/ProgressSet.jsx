@@ -7,7 +7,7 @@ const ProgressSet = ({ precent, all, save, title }) => {
         '100%': '#001F54',
     };
     return (
-        <div className='flex flex-col my-2'>
+        <div className='flex flex-col my-4'>
             <div className='flex justify-between'>
                 <h1>{title}</h1>
                 <h2 className='text-[#001F54]'>{save} / {all} GB</h2>
