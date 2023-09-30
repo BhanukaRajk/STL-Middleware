@@ -1,108 +1,68 @@
-/* eslint-disable react/no-children-prop */
-import { useState } from "react";
-import {
-    Flex,
-    Heading,
-    Input,
-    Button,
-    InputGroup,
-    Stack,
-    InputLeftElement,
-    chakra,
-    Box,
-    Link,
-    Avatar,
-    FormControl,
-    FormHelperText,
-    InputRightElement
-} from "@chakra-ui/react";
-import { FaUserAlt, FaLock } from "react-icons/fa";
 
-const CFaUserAlt = chakra(FaUserAlt);
-const CFaLock = chakra(FaLock);
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
-    const [showPassword, setShowPassword] = useState(false);
-
-    const handleShowClick = () => setShowPassword(!showPassword);
+    const navigate = useNavigate()
     return (
-        <Flex
-            flexDirection="column"
-            width="100wh"
-            height="100vh"
-            backgroundColor="gray.200"
-            justifyContent="center"
-            alignItems="center"
-        >
-            <Stack
-                flexDir="column"
-                mb="2"
-                justifyContent="center"
-                alignItems="center"
-            >
-                <Avatar bg="teal.500" />
-                <Heading color="teal.400">Welcome</Heading>
-                <Box minW={{ base: "90%", md: "468px" }}>
-                    <form>
-                        <Stack
-                            spacing={4}
-                            p="1rem"
-                            backgroundColor="whiteAlpha.900"
-                            boxShadow="md"
-                        >
-                            <FormControl>
-                                <InputGroup>
-                                    <InputLeftElement
-                                        pointerEvents="none"
-                                        children={<CFaUserAlt color="gray.300" />}
-                                    />
-                                    <Input type="email" placeholder="email address" />
-                                </InputGroup>
-                            </FormControl>
-                            <FormControl>
-                                <InputGroup>
-                                    <InputLeftElement
-                                        pointerEvents="none"
-                                        color="gray.300"
-                                        // eslint-disable-next-line react/no-children-prop
-                                        children={<CFaLock color="gray.300" />}
-                                    />
-                                    <Input
-                                        type={showPassword ? "text" : "password"}
-                                        placeholder="Password"
-                                    />
-                                    <InputRightElement width="4.5rem">
-                                        <Button h="1.75rem" size="sm" onClick={handleShowClick}>
-                                            {showPassword ? "Hide" : "Show"}
-                                        </Button>
-                                    </InputRightElement>
-                                </InputGroup>
-                                <FormHelperText textAlign="right">
-                                    <Link>forgot password?</Link>
-                                </FormHelperText>
-                            </FormControl>
-                            <Button
-                                borderRadius={0}
-                                type="submit"
-                                variant="solid"
-                                colorScheme="teal"
-                                width="full"
-                            >
-                                Login
-                            </Button>
-                        </Stack>
-                    </form>
-                </Box>
-            </Stack>
-            <Box>
-                New to us?{" "}
-                <Link color="teal.500" href="#">
-                    Sign Up
-                </Link>
-            </Box>
-        </Flex>
-    );
 
+        <div className=" h-screen">
+            <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-around px-4">
+                {/* <!-- Left column container with background--> */}
+                <div className="hidden lg:flex mb-12 md:mb-0 w-4/12">
+                    <img
+                        src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                        className="w-full"
+                        alt="Phone image" />
+                </div>
+
+                {/* <!-- Right column container with form --> */}
+                <div className="w-full lg:w-5/12 border border-black-2 rounded-lg shadow-lg">
+                    <form className="p-5">
+                        {/* <!-- Email input --> */}
+                        <h1 className="mb-4 text-3xl flex items-center justify-center font-bold text-gray-900">
+                            <span>Sign in</span>
+                        </h1>
+                        <div className="mb-6">
+                            <label htmlFor="phone-number" className="block mb-2 text-sm font-medium text-gray-900">Phone Number</label>
+                            <input type="phone" id="phone-number" className="text-gray-900 text-sm border-2 rounded-lg border-gray-400 focus:border-sky-900 outline-none block w-full p-2.5 " placeholder="071-xxxxxxx" required></input>
+                        </div>
+
+                        {/* <!-- Password input --> */}
+                        <div className="mb-6">
+                            <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
+                            <input type="password" id="password" className="text-gray-900 text-sm border-2 rounded-lg border-gray-400 focus:border-sky-900 outline-none block w-full p-2.5   " placeholder="•••••••••" required></input>
+                        </div>
+
+                        {/* <!-- Remember me checkbox --> */}
+                        <div className="mb-4 flex ">
+
+
+                            {/* <!-- Forgot password link --> */}
+                            <span
+                                onClick={() => navigate('/forgot-password/verify-number')}
+                                className="text-primary cursor-pointer transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+                            >Forgot password?
+                            </span>
+                        </div>
+
+                        {/* <!-- Submit button --> */}
+                        <button
+                            type="submit"
+                            className="inline-block w-full rounded bg-sky-900 text-white px-7 mb-4 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] "
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Sign in
+                        </button>
+                        <div>
+                            <p>Not Registered?<span onClick={() => navigate('/sign-up')} className='font-bold px-1 cursor-pointer'>Sign up</span>Here</p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    )
 }
 
 export default Login
