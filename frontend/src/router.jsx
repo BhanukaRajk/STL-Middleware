@@ -5,11 +5,12 @@ import VerifyPhoneNumber from "../src/pages/VerifyPhoneNumber.jsx"
 import VerifyOTP from "../src/pages/VerifyOTP.jsx"
 import VerifyNewPassword from "../src/pages/VerifyNewPassword.jsx"
 import SignUp from "../src/pages/SignUp.jsx"
+import Dashboard from "./pages/Dashboard.jsx";
 
 const routes = [
 	{
 		path: "/",
-		element: <div>Landing</div>,
+		element: <div className="text-red-400">Landing</div>,
 	},
 	{
 		path: "/login",
@@ -31,7 +32,11 @@ const routes = [
 		path: "/forgot-password/verify-new-password",
 		element: <VerifyNewPassword />
 	},
+	{
 
+		path: "/dashboard",
+		element: <Dashboard />,
+	}
 ];
 
 const router = createBrowserRouter(routes);
