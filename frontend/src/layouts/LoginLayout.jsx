@@ -5,7 +5,7 @@ import SideDrawer from "../components/SideDrawer";
 
 const LoginLayout = () => {
 	return (
-		<section className=" w-[70%] flex flex-col mx-auto relative">
+		<section className=" md:w-[70%] w-full flex flex-col mx-auto relative">
 			<DashNav />
 			<Outlet />
 			<SideDrawer />
