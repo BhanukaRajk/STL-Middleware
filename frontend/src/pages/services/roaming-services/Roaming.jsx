@@ -1,6 +1,6 @@
 import Banner from "../../../components/Roaming/Banner";
 import RoamingPackages from "../../../components/Roaming/RoamingPackages";
-import RoamingDetails from "../../../components/Roaming/RoamingDetails";
+import CountryDetails from "../../../components/Roaming/CountryDetails";
 import Footer from "../../../components/Footer/Footer";
 
 export function Roaming() {
@@ -8,7 +8,7 @@ export function Roaming() {
         <div>
             <Banner />
             <RoamingPackages />
-            <RoamingDetails />
+            <CountryDetails />
             <Footer />
         </div>
     );

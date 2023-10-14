@@ -1,9 +1,9 @@
 
 import { Select } from 'antd';
-import RoamingDetailCard from "./RoamingDetailCard";
+import RoamingDetailCard from "./CountryDetailCard";
 
 // ROAMING CHARGES DETAILING SECTION FOR SELECTED COUNTRY
-const RoamingDetails = () => {
+const CountryDetails = () => {
 
     const handleChange = (value) => {
         console.log(value);
@@ -71,4 +71,4 @@ const RoamingDetails = () => {
     );
 };
 
-export default RoamingDetails;
+export default CountryDetails;
