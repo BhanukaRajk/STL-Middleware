@@ -1,7 +1,15 @@
+import Banner from "../../../components/Roaming/Banner";
+import RoamingPackages from "../../../components/Roaming/RoamingPackages";
+import RoamingDetails from "../../../components/Roaming/RoamingDetails";
+import Footer from "../../../components/Footer/Footer";
+
 export function Roaming() {
     return (
         <div>
-            <h1>Roaming</h1>
+            <Banner />
+            <RoamingPackages />
+            <RoamingDetails />
+            <Footer />
         </div>
     );
 }
