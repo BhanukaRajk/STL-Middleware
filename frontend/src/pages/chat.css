@@ -24,3 +24,41 @@
 .chat-message-container .chat-header .backBtn{
     display: none;
 }
+
+
+.chat .profile-image img {
+    width: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #0E0E1A;
+
+}
+
+.chat-body {
+    background: #0E0E1A;
+    height: 75vh;
+    overflow-y: scroll;
+    border: 2px solid #0693F3;
+    border-top: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.chat-body::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-body .receiver-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-body .receiver-side .message {
+    background: #83BCFF;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
