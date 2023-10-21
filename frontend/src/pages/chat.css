@@ -180,6 +180,60 @@
 }
 
 
+.notSelectedUserPage .empty-part .image-part {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notSelectedUserPage .empty-part .image-part img {
+    width: 400px;
+}
+
+
+@media only screen and (max-width: 850px) {
+    .notSelectedUserPage .empty-part {
+        display: none;
+    }
+
+    .chat {
+        display: grid;
+        grid-template-columns:0% 90%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .chat-user-list {
+        background: #0693F3;
+        padding: 10px;
+        border: 2px solid #0693F3;
+        height: 90vh;
+        border-radius: 30px;
+        padding-left: 30px;
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    .responsive-user-list{
+        display: block;
+    }
+
+    .responsive-chat-container{
+        display: block;
+    }
+
+    .chat-message-container .chat-header .backBtn{
+        display: block;
+    }
+
+    .chat-message-container .chat-header .backBtn .responsiveBackBtn{
+        display: block;
+    }
+
+}
+
 .notSelectedUserPage .empty-part {
     padding: 20px;
     border-radius: 10px;
