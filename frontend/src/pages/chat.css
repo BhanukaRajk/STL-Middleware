@@ -1,0 +1,26 @@
+.chat {
+    display: grid;
+    grid-template-columns: 75% auto;
+    height: 100vh;
+    column-gap: 5px;
+    overflow: hidden;
+}
+
+/* .chat-message-container {
+    width: 0 auto;
+} */
+
+
+.chat-message-container .chat-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    background: #0693F3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-message-container .chat-header .backBtn{
+    display: none;
+}
