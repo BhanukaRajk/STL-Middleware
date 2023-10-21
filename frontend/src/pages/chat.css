@@ -118,3 +118,52 @@
 .chat-user-list::-webkit-scrollbar {
     display: none;
 }
+
+
+
+.search-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0E0E1A;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 100%;
+    height: 40px;
+    padding: 2px;
+}
+
+.search-chat input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 100%;
+    background: #0693F3;
+}
+
+
+.search-chat input::placeholder {
+    color: #0E0E1A;
+    font-weight: 500;
+}
+
+.one-chat {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #83BCFF;
+    cursor: pointer;
+}
+
+.one-chat img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.one-chat .chat-details h3 {
+    color: #0E0E1A;
+    font-weight: 600;
+    font-size: 17px;
+}
