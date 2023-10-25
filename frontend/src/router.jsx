@@ -7,11 +7,14 @@ import VerifyNewPassword from "../src/pages/VerifyNewPassword.jsx";
 import SignUp from "../src/pages/SignUp.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import LoginLayout from "./layouts/LoginLayout.jsx";
+import RentalPacks from "./pages/services/data-packages/RentalPacks.jsx";
+import DataPackages from "./pages/services/data-packages/dataPackages.jsx";
+
 
 const routes = [
 	{
 		path: "/",
-		element: <div className="text-red-400">Landing</div>,
+		element: <DataPackages/>
 	},
 	{
 		path: "/login",
