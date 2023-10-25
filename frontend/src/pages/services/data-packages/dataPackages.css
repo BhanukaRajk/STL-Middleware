@@ -1,0 +1,33 @@
+.all-packages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.all-packages > div{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 13%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 40px;
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.2);
+    }
+    @media screen and (max-width: 768px){
+        margin: 1rem 0;
+    }
+}
