@@ -1,9 +1,6 @@
 import React from 'react'
-import './rentalPacks.css'
-import { TiStopwatch } from 'react-icons/ti'
-import { FaSignal } from 'react-icons/fa'
 
-const RentalPacks = ({ planName, price, duration, packageSize }) => {
+const TImeBasedPacks = () => {
   return (
     <div className='rentalPacks'>
       <div className="details">
@@ -25,4 +22,4 @@ const RentalPacks = ({ planName, price, duration, packageSize }) => {
   )
 }
 
-export default RentalPacks
+export default TImeBasedPacks
