@@ -6,8 +6,11 @@ import {BiSolidPhoneCall} from 'react-icons/bi'
 import {MdEmail} from 'react-icons/md'
 import {WiNightAltCloudy} from 'react-icons/wi'
 import {AiOutlineGift} from 'react-icons/ai'
+import {BiPhoneCall} from 'react-icons/bi'
+import {HiOutlineMail} from 'react-icons/hi'
 
-const BlasterPack = ({ planName, price, duration, packageSize }) => {
+
+const BlasterPack = ({ planName, price, call, sms, nightTime ,fourGB, night }) => {
     return (
         <div className='rentalPacks'>
             <div className="details">
@@ -16,12 +19,13 @@ const BlasterPack = ({ planName, price, duration, packageSize }) => {
                 <p className='inline-block'><TiStopwatch className='inline-block mb-1 mr-2 text-2xl' />1 day (recurring)</p>
             </div>
             <div className="data-size">
-                <p><BiSolidPhoneCall className='inline-block mb-1'/> 15min</p>
-                <p><MdEmail className='inline-block mb-1'/> 50 sms</p>
-                <p><WiNightAltCloudy className='inline-block'/> 50 MB</p>
+                <p><BiPhoneCall className='inline-block mb-1'/> {call} min</p>
+                <p><HiOutlineMail className='inline-block mb-1'/> {sms} sms</p>
+                <p><WiNightAltCloudy className='inline-block'/> {nightTime} MB</p>
             </div>
             <div className="data-size bonus">
-                <p><AiOutlineGift className='inline-block mb-1'/> 10 mins</p>
+                <p><AiOutlineGift className='inline-block mb-1'/> {fourGB} MB (4G)</p>
+                <p><AiOutlineGift className='inline-block mb-1'/> {night} MB (Night)</p>
             </div>
             <div className="activate">
                 <button>Activate</button>
