@@ -1,6 +1,6 @@
 import React from 'react'
 import BudgetPack from './budgetPack'
-
+import BlasterPack from './blasterPack'
 
 const VoicePackages = () => {
     return (
@@ -10,7 +10,7 @@ const VoicePackages = () => {
             <BudgetPack planName={"Any net 250"} price={"163"} duration={"30"} packageSize={"250 mins"}/>
             <BudgetPack planName={"Budget Pack"} price={"240"} duration={"30"} packageSize={"400 mins"}/>
 
-            
+            <BlasterPack planName={"Blaster Pack"} price={"300"} duration={"30"} packageSize={"Unlimited"}/>
         </div>
     )
 }
