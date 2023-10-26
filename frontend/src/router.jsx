@@ -11,6 +11,7 @@ import RentalPacks from "./pages/services/data-packages/RentalPacks.jsx";
 import DataPackages from "./pages/services/data-packages/dataPackages.jsx";
 import VoicePackages from "./pages/services/voice-add-on/VoicePackages.jsx";
 
+
 const routes = [
 	{
 		path: "/",
