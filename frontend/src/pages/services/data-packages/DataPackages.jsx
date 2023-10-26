@@ -3,6 +3,8 @@ import RentalPacks from './RentalPacks'
 import './dataPackages.css'
 import { FaSyncAlt } from 'react-icons/fa'
 import { BiTimeFive } from 'react-icons/bi'
+import UnlimitedPack from './unlimitedPack'
+
 
 
 const DataPackages = () => {
@@ -69,18 +71,12 @@ const DataPackages = () => {
                 </div>
 
                 <div className="one-pack">
-                    <h3>Rental Packs</h3>
-                    <RentalPacks planName='Rental Pack 1' price='1000' duration='30 days' packageSize='100' />
-                    <RentalPacks planName='Rental Pack 1' price='1000' duration='30 days' packageSize='100' />
-                    <RentalPacks planName='Rental Pack 1' price='1000' duration='30 days' packageSize='100' />
+                    <h3>Anytime unlimited</h3>
+                    <UnlimitedPack planName={'Unlimited Pack 1'} price={'1000'} duration={'30 days'} packageSize={'100'} />
+                    <UnlimitedPack planName={'Unlimited Pack 1'} price={'1000'} duration={'30 days'} packageSize={'100'} />
+                    <UnlimitedPack planName={'Unlimited Pack 1'} price={'1000'} duration={'30 days'} packageSize={'100'} />
                 </div>
 
-                <div className="one-pack">
-                    <h3>Rental Packs</h3>
-                    <RentalPacks planName='Rental Pack 1' price='1000' duration='30 days' packageSize='100' />
-                    <RentalPacks planName='Rental Pack 1' price='1000' duration='30 days' packageSize='100' />
-                    <RentalPacks planName='Rental Pack 1' price='1000' duration='30 days' packageSize='100' />
-                </div>
             </div>
 
         </div>

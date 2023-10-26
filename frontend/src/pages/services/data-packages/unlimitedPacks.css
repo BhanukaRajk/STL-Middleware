@@ -1,0 +1,78 @@
+.rentalPacks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    padding: 10px 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 40px;
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.2);
+    }
+    @media screen and (max-width: 768px){
+        margin: 1rem 0;
+    }
+}
+
+.packs{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.packs h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.rentalPacks h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.rentalPacks h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.rentalPacks .details p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.rentalPacks .data-size p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.rentalPacks .activate button{
+    width: 100%;
+    height: 100%;
+    padding: 10px 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0,0,0,0.1);
+    box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 40px;
+}
