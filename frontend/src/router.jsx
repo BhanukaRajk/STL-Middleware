@@ -9,12 +9,12 @@ import Dashboard from "./pages/Dashboard.jsx";
 import LoginLayout from "./layouts/LoginLayout.jsx";
 import RentalPacks from "./pages/services/data-packages/RentalPacks.jsx";
 import DataPackages from "./pages/services/data-packages/dataPackages.jsx";
-
+import VoicePackages from "./pages/services/voice-add-on/VoicePackages.jsx";
 
 const routes = [
 	{
 		path: "/",
-		element: <DataPackages/>
+		element: <VoicePackages/>
 	},
 	{
 		path: "/login",
