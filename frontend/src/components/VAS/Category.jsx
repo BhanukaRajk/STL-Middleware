@@ -28,7 +28,7 @@ const getItems = (panelStyle, data) => [
     },
 ];
 
-const ServiceCategory = (data) => {
+const ServiceCategory = ({data}) => {
 
     if (data) {
         const { token } = theme.useToken();

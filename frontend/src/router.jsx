@@ -10,13 +10,16 @@ import LoginLayout from "./layouts/LoginLayout.jsx";
 import RentalPacks from "./pages/services/data-packages/RentalPacks.jsx";
 import DataPackages from "./pages/services/data-packages/dataPackages.jsx";
 import VoicePackages from "./pages/services/voice-add-on/VoicePackages.jsx";
+import { Outlet } from "react-router-dom";
+import Roaming from "./pages/services/roaming-services/Roaming.jsx";
+import ValueAddedServices from "./pages/services/value-added-services/VAS.jsx";
+import Sport from "./components/VAS/Sport.jsx";
+import News from "./components/VAS/News.jsx";
+import Games from "./components/VAS/Gaming.jsx";
+import RoamingPackages from "./components/Roaming/RoamingPackages.jsx";
 
 
 const routes = [
-	{
-		path: "/",
-		element: <VoicePackages/>
-	},
 	{
 		path: "/login",
 		element: <Login />,
@@ -38,12 +41,60 @@ const routes = [
 		element: <VerifyNewPassword />,
 	},
 	{
-		path: "/dashboard",
+		path: "/",
 		element: <LoginLayout />,
 		children: [
 			{
-				path: "",
+				path: "/",
 				element: <Dashboard />,
+			},
+			{
+				path: "/profile",
+				element: <></>,
+			},
+			{
+				path: "/services",
+				element: <><Outlet /></>,
+				children: [
+					{
+						path: "/services/data-packages",
+						element: <DataPackages />,
+					},
+					{
+						path: "/services/voice-add-on",
+						element: <VoicePackages />,
+					},
+					{
+						path: "/services/roaming",
+						element: <RoamingPackages />,
+					},
+					{
+						path: "/services/ringing-tones",
+						element: <RentalPacks />,
+					},
+					{
+						path: "/services/vale-added",
+						element: <ValueAddedServices />,
+						children: [
+							{
+								path: "/services/vale-added/sports",
+								element: <Sport />,
+							},
+							{
+								path: "/services/vale-added/news",
+								element: <News />,
+							},
+							{
+								path: "/services/vale-added/video-n-games",
+								element: <Games />,
+							},
+							{
+								path: "/services/vale-added/lifestyle",
+								element: <RentalPacks />,
+							},
+						]
+					}
+				]
 			},
 		],
 	},

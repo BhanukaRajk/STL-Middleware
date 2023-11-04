@@ -5,6 +5,8 @@ import Gaming from "../../../components/VAS/Gaming";
 import RoamingPackages from "../../../components/Roaming/RoamingPackages";
 import CountryDetails from "../../../components/Roaming/CountryDetails";
 import Footer from "../../../components/Footer/Footer";
+import { Outlet } from "react-router-dom";
+
 
 const VasBanner = [
     {
@@ -18,11 +20,12 @@ const ValueAddedServices = () => {
     return (
         <div>
             <Banner data={VasBanner} />
-            <News />
+            <Outlet />
+            {/* <News />
             <Sport />
             <Gaming />
             <RoamingPackages />
-            <CountryDetails />
+            <CountryDetails /> */}
             <Footer />
         </div>
     );
