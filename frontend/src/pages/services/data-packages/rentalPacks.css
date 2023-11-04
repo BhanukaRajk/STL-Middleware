@@ -13,13 +13,13 @@
     box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.1);
     transition: all 0.3s ease-in-out;
     margin-top: 40px;
-    &:hover{
+    /* &:hover{
         transform: scale(1.02);
         box-shadow: 0 0 0.5rem 0.1rem rgba(0,0,0,0.2);
     }
     @media screen and (max-width: 768px){
         margin: 1rem 0;
-    }
+    } */
 }
 
 .packs{
