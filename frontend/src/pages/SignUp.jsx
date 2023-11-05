@@ -166,7 +166,7 @@ const SignUp = () => {
 									onClick={() => navigate("/login")}
 									className="font-bold px-1 cursor-pointer"
 								>
-									Sign In
+									Log In
 								</span>
 								Here
 							</p>
