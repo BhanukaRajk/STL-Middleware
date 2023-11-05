@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import mainRouter from './routes/main.router.js';
 dotenv.config();
 
+import dataAddOns from './models/dataAddons.models.js';
+
 const app = express();
 
 const port = process.env.PORT || 3003;
