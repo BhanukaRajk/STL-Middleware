@@ -1,0 +1,26 @@
+export const RentalPacksData = [
+    {
+        "planName":"Daily Rental Pack",
+        "price": 100,
+        "duration":"30",
+        "packageSize":"100",
+        "is_active":false
+    },
+    {
+        "planName":"Weekly Rental Pack",
+        "price": 500,
+        "duration":"30",
+        "packageSize":"500",
+        "is_active":false
+    },
+    {
+        "planName":"Monthly Rental Pack",
+        "price": 1000,
+        "duration":"30",
+        "packageSize":"1000",
+        "is_active":false
+    },
+]
+
+
+
