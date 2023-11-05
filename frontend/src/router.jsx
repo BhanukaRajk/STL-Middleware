@@ -17,6 +17,7 @@ import Sport from "./components/VAS/Sport.jsx";
 import News from "./components/VAS/News.jsx";
 import Games from "./components/VAS/Gaming.jsx";
 import RoamingPackages from "./components/Roaming/RoamingPackages.jsx";
+import VasSelection from "./pages/services/value-added-services/VasSelection.jsx";
 
 
 const routes = [
@@ -57,6 +58,10 @@ const routes = [
 				element: <><Outlet /></>,
 				children: [
 					{
+						path: "/services",
+						element: <Roaming />,
+					},
+					{
 						path: "/services/data-packages",
 						element: <DataPackages />,
 					},
@@ -73,26 +78,8 @@ const routes = [
 						element: <RentalPacks />,
 					},
 					{
-						path: "/services/vale-added",
-						element: <ValueAddedServices />,
-						children: [
-							{
-								path: "/services/vale-added/sports",
-								element: <Sport />,
-							},
-							{
-								path: "/services/vale-added/news",
-								element: <News />,
-							},
-							{
-								path: "/services/vale-added/video-n-games",
-								element: <Games />,
-							},
-							{
-								path: "/services/vale-added/lifestyle",
-								element: <RentalPacks />,
-							},
-						]
+						path: "/services/value-added",
+						element: <VasSelection />,
 					}
 				]
 			},

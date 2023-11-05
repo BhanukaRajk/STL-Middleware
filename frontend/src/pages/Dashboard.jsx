@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Dashboard = () => {
 	return (
-		<>
+		<div className="">
 			<NotificationPanel />
 			<div className="flex lg:flex-row flex-col">
 				<ProgressContainer title={"Data Usage"}>
@@ -60,7 +60,7 @@ const Dashboard = () => {
 					</div>
 				</ProgressContainer>
 			</div>
-		</>
+		</div>
 	);
 };
 

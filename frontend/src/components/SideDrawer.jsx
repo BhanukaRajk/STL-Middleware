@@ -7,27 +7,27 @@ import useDrawer from "../hooks/useDrawer";
 const drawerContent = [
 	{
 		label: "Dashboard",
-		to: "/dashboard",
+		to: "/",
 	},
 	{
 		label: "Roaming Services",
-		to: "/sdsd",
+		to: "/services/roaming",
 	},
 	{
 		label: "Ringing Tones",
-		to: "/dsds",
+		to: "/services/ringing-tones",
 	},
 	{
 		label: "Data Packages",
-		to: "/sdsd",
+		to: "/services/data-packages",
 	},
 	{
 		label: "Voice Addon",
-		to: "/dsdsd",
+		to: "/services/voice-add-on",
 	},
 	{
 		label: "Value Added Services",
-		to: "/dsdsd",
+		to: "/services/value-added",
 	},
 ];
 
@@ -49,10 +49,9 @@ const SideDrawer = () => {
 						key={index}
 						to={item.to}
 						className={({ isActive }) =>
-							`px-4 py-2 rounded-md text-base ${
-								isActive
-									? "bg-blue-950 text-white"
-									: "hover:bg-gray-300 text-black hover:text-black"
+							`px-4 py-2 rounded-md text-base ${isActive
+								? "bg-blue-950 text-white"
+								: "hover:bg-gray-300 text-black hover:text-black"
 							}`
 						}
 					>
