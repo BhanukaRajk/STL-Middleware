@@ -8,7 +8,7 @@ const newsSchema = new mongoose.Schema({
     },
     vas: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: VAS
+        ref: 'VAS'
     }
 });
 

@@ -46,3 +46,51 @@ export const testAuth = async () => {
         return null;
     }
 }
+
+export const sendOTP = async (email) => {
+    try {
+        const response = await apiTelco.post('/auth/send-otp', { email });
+
+        if (response.status === 200) {
+            console.log(response.data);
+            return response.data;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+};
+
+export const verifyOTP = async (email, otp) => {
+    try {
+        const response = await apiTelco.post('/auth/verify-otp', { email, otp });
+
+        if (response.status === 200) {
+            console.log(response.data);
+            return response.data;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+};
+
+export const resetPassword = async (email, newPassword) => {
+    try {
+        const response = await apiTelco.post('/auth/reset-password', { email, newPassword });
+
+        if (response.status === 200) {
+            console.log(response.data);
+            return response.data;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+};

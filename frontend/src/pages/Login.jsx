@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { login } from "../api/authApi";
+import { jwtDecode } from "jwt-decode";
+import useUser from "../hooks/useUser";
 
 const Login = () => {
 	const navigate = useNavigate();
+	const { setUserContext } = useUser();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -14,6 +17,9 @@ const Login = () => {
 
 		if (token) {
 			localStorage.setItem("token", token);
+			const user = jwtDecode(token);
+			setUserContext(user);
+
 			navigate("/");
 		} else {
 			alert("Invalid credentials");
