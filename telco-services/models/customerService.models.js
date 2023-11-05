@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 import Customer from './customer.model.js';
-import Service from './service.model.js';
 
 const customerServiceSchema = new mongoose.Schema({
     customer_id: {
@@ -10,7 +9,14 @@ const customerServiceSchema = new mongoose.Schema({
     },
     service_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: Service,
+        required: false
+    },
+    status: {
+        type: String, // completed, pending, cancelled
+        required: true
+    },
+    type: {         // data, voice, vas, roaming, ringing
+        type: String,
         required: true
     },
     date_subscribed: {

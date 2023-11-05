@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Service from "./service.model.js";
 
 const roamingSchema = new mongoose.Schema({
     country: {
@@ -11,11 +10,10 @@ const roamingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    service_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: Service,
+    price: {
+        type: Number,
         required: true
-    }
+    },
 });
 
 const Roaming = mongoose.model('Roaming', roamingSchema);

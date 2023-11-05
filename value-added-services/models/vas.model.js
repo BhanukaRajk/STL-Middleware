@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Service from "./service.model.js";
 
 const vasSchema = new mongoose.Schema({
     description: {
@@ -10,11 +9,10 @@ const vasSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    service_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: Service,
+    price: {
+        type: Number,
         required: true
-    }
+    },
 });
 
 const VAS = mongoose.model('VAS', vasSchema);
