@@ -17,7 +17,7 @@ export const getVideoServices = async () => {
 
 export const getSportServices = async () => {
     const response = await apiTelco.get('/vas/sports')
-    return response.data
+    return response
 }
 
 export const getGamingServices = async () => {

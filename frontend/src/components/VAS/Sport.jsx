@@ -47,13 +47,14 @@ import Category from "./Category";
 
 const Sport = () => {
 
-    const [services, setServices] = useState({});
-    
-    useEffect(() => {
+	const [services, setServices] = useState({});
+
+	useEffect(() => {
 		const fetchServices = async () => {
 			try {
 				const response = await getSportServices();
 				setServices(response.data);
+				console.log(response.data);
 			} catch (error) {
 				console.error(error);
 			}
@@ -63,12 +64,12 @@ const Sport = () => {
 	}, []);
 
 
-    
-    return (
-        <>
-            <Category data={services} />
-        </>
-    );
+
+	return (
+		<>
+			<Category data={services} />
+		</>
+	);
 };
 
 export default Sport;

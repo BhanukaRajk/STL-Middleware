@@ -47,13 +47,13 @@ import Category from "./Category";
 
 const News = () => {
 
-    const [services, setServices] = useState({});
-    
-    useEffect(() => {
+	const [services, setServices] = useState({});
+
+	useEffect(() => {
 		const fetchServices = async () => {
 			try {
 				const response = await getNewsServices();
-				setServices(response.data);
+				setServices(response);
 			} catch (error) {
 				console.error(error);
 			}
@@ -63,11 +63,11 @@ const News = () => {
 	}, []);
 
 
-    return (
-        <>
-            <Category data={services} />
-        </>
-    );
+	return (
+		<>
+			<Category data={services} />
+		</>
+	);
 };
 
 export default News;

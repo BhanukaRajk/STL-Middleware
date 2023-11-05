@@ -5,16 +5,17 @@ import { apiVAS } from '../api/index.js';
 export const getVasServices = async (req, res) => {
     try {
         const { type } = req.params;
-        if(type === 'games') {
+        if (type === 'games') {
             const response = await apiVAS.get(`/vas/games`);
             res.json(response.data);
-        } else if(type === 'news') {
+        } else if (type === 'news') {
             const response = await apiVAS.get(`/vas/news`);
+            console.log(response)
             res.json(response.data);
-        } else if(type === 'video') {
+        } else if (type === 'video') {
             const response = await apiVAS.get(`/vas/video`);
             res.json(response.data);
-        } else if(type === 'sports') {
+        } else if (type === 'sports') {
             const response = await apiVAS.get(`/vas/sports`);
             res.json(response.data);
         } else {

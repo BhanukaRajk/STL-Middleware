@@ -25,13 +25,13 @@ import Category from "./Category";
 
 const Video = () => {
 
-    const [services, setServices] = useState({});
-    
-    useEffect(() => {
+	const [services, setServices] = useState({});
+
+	useEffect(() => {
 		const fetchServices = async () => {
 			try {
 				const response = await getVideoServices();
-				setServices(response.data);
+				setServices(response);
 			} catch (error) {
 				console.error(error);
 			}
@@ -41,11 +41,11 @@ const Video = () => {
 	}, []);
 
 
-    return (
-        <>
-            <Category data={services} />
-        </>
-    );
+	return (
+		<>
+			<Category data={services} />
+		</>
+	);
 };
 
 export default Video;

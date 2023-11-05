@@ -40,13 +40,13 @@ import Category from "./Category";
 
 const Games = () => {
 
-    const [services, setServices] = useState({});
-    
-    useEffect(() => {
+	const [services, setServices] = useState({});
+
+	useEffect(() => {
 		const fetchServices = async () => {
 			try {
 				const response = await getGamingServices();
-				setServices(response.data);
+				setServices(response);
 			} catch (error) {
 				console.error(error);
 			}
@@ -55,11 +55,11 @@ const Games = () => {
 		fetchServices();
 	}, []);
 
-    return (
-        <>
-            <Category data={services} />
-        </>
-    );
+	return (
+		<>
+			<Category data={services} />
+		</>
+	);
 };
 
 export default Games

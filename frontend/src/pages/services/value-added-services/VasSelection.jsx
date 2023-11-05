@@ -31,11 +31,6 @@ const VasSelection = () => {
             label: "Video",
             children: <Videos />,
         },
-        {
-            key: "5",
-            label: "Lifestyle",
-            children: <Sport />,
-        },
     ];
 
     const onChange = (key) => {
