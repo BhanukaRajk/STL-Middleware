@@ -1,6 +1,6 @@
 import { CaretRightOutlined } from '@ant-design/icons';
 import { Collapse, theme } from 'antd';
-
+import PropTypes from 'prop-types';
 
 
 const getItems = (panelStyle, data) => [
@@ -38,7 +38,7 @@ const getItems = (panelStyle, data) => [
     },
 ];
 
-const ServiceCategory = ({data}) => {
+const ServiceCategory = ({ data }) => {
 
     if (data) {
         const { token } = theme.useToken();
@@ -68,5 +68,9 @@ const ServiceCategory = ({data}) => {
         )
     }
 };
+
+ServiceCategory.propTypes = {
+    data: PropTypes.any.isRequired
+}
 
 export default ServiceCategory;

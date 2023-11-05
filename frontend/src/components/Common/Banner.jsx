@@ -1,7 +1,7 @@
 import RoamingImage from "../../assets/images/banners/roaming-banner.jpg";
 
 // THIS IS THE STATIC BANNER IMAGE IN THE ROAMING PAGE TOP
-const Banner = (data) => {
+const Banner = () => {
     return (
         <div className="flex flex-row">
             <div className="flex flex-col">
@@ -9,7 +9,7 @@ const Banner = (data) => {
                 <div>Stay connected wherever you go</div>
             </div>
             <div>
-                <image src={RoamingImage} alt="Raming Image"></image>
+                <image src={RoamingImage} alt="Roaming Image"></image>
             </div>
         </div>
     );
