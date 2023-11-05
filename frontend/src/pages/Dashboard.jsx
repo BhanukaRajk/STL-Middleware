@@ -8,17 +8,18 @@ const Dashboard = () => {
 	return (
 		<div className="">
 			<NotificationPanel />
-			<div className="flex lg:flex-row flex-col">
+			<h1 className="text-xl text-blue-950 ml-5 mt-3">Data Add-ons</h1>
+			<div className="flex lg:flex-row overflow-y-hidden overflow-x-scroll">
 				<ProgressContainer title={"Data Usage"}>
 					<ProgressSet
 						all={30}
-						precent={60}
+						percent={60}
 						save={23}
 						title={"Any time Data"}
 					/>
 					<ProgressSet
 						all={30}
-						precent={20}
+						percent={20}
 						save={10}
 						title={"Night time Data"}
 					/>
@@ -26,13 +27,59 @@ const Dashboard = () => {
 				<ProgressContainer title={"Voice Usage"}>
 					<ProgressSet
 						all={30}
-						precent={60}
+						percent={60}
 						save={23}
 						title={"Any time Data"}
 					/>
 					<ProgressSet
 						all={30}
-						precent={20}
+						percent={20}
+						save={10}
+						title={"Night time Data"}
+					/>
+				</ProgressContainer>
+				<ProgressContainer title={"Voice Usage"}>
+					<ProgressSet
+						all={30}
+						percent={60}
+						save={23}
+						title={"Any time Data"}
+					/>
+					<ProgressSet
+						all={30}
+						percent={20}
+						save={10}
+						title={"Night time Data"}
+					/>
+				</ProgressContainer>
+
+			</div>
+			<h1 className="text-xl text-blue-950 ml-5 mt-3">Voice Add-ons</h1>
+			<div className="flex lg:flex-row flex-col">
+				<ProgressContainer title={"Data Usage"}>
+					<ProgressSet
+						all={30}
+						percent={60}
+						save={23}
+						title={"Any time Data"}
+					/>
+					<ProgressSet
+						all={30}
+						percent={20}
+						save={10}
+						title={"Night time Data"}
+					/>
+				</ProgressContainer>
+				<ProgressContainer title={"Voice Usage"}>
+					<ProgressSet
+						all={30}
+						percent={60}
+						save={23}
+						title={"Any time Data"}
+					/>
+					<ProgressSet
+						all={30}
+						percent={20}
 						save={10}
 						title={"Night time Data"}
 					/>

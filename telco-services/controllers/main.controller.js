@@ -3,7 +3,6 @@ import { apiAddOns, apiVAS } from '../api/index.js';
 
 export const init = async (req, res) => {
     const customers = await Customer.find({})
-    const response = await apiAddOns.get('/');
     res.json({ message: 'Hello from  Services API' });
 }
 
