@@ -12,6 +12,12 @@ const SignUp = () => {
 		const email = e.target.email.value;
 		const phoneNumber = e.target["phone-number"].value;
 		const password = e.target.password.value;
+		const confirmPassword = e.target["confirm-password"].value;
+
+		if (password !== confirmPassword) {
+			alert("Passwords do not match");
+			return;
+		}
 
 		const res = await signup(firstName, lastName, phoneNumber, email, password);
 
@@ -75,23 +81,23 @@ const SignUp = () => {
 								></input>
 							</div>
 						</div>
-						<div className="mb-4">
-							<label
-								htmlFor="email"
-								className="block mb-2 text-sm font-medium text-gray-900"
-							>
-								Email
-							</label>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								className="text-gray-900 text-sm border-2 rounded-lg border-gray-400 focus:border-sky-900 outline-none block w-full p-2.5"
-								placeholder="john.doe@company.com"
-								required
-							></input>
-						</div>
 						<div className=" grid grid-cols-2 gap-x-4 mb-4">
+							<div>
+								<label
+									htmlFor="email"
+									className="block mb-2 text-sm font-medium text-gray-900"
+								>
+									Email
+								</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									className="text-gray-900 text-sm border-2 rounded-lg border-gray-400 focus:border-sky-900 outline-none block w-full p-2.5"
+									placeholder="john.doe@company.com"
+									required
+								/>
+							</div>
 							<div>
 								<label
 									htmlFor="phone-number"
@@ -108,6 +114,8 @@ const SignUp = () => {
 									required
 								></input>
 							</div>
+						</div>
+						<div className=" grid grid-cols-2 gap-x-4 mb-4">
 							<div className="mb-4">
 								<label
 									htmlFor="password"
@@ -119,6 +127,23 @@ const SignUp = () => {
 									type="password"
 									id="password"
 									name="password"
+									className="text-gray-900 text-sm border-2 rounded-lg border-gray-400 focus:border-sky-900 outline-none block w-full p-2.5  "
+									placeholder="•••••••••"
+									required
+								></input>
+							</div>
+
+							<div className="mb-4">
+								<label
+									htmlFor="confirm-password"
+									className="block mb-2 text-sm font-medium text-gray-900 "
+								>
+									Confirm Password
+								</label>
+								<input
+									type="password"
+									id="confirm-password"
+									name="confirm-password"
 									className="text-gray-900 text-sm border-2 rounded-lg border-gray-400 focus:border-sky-900 outline-none block w-full p-2.5  "
 									placeholder="•••••••••"
 									required
