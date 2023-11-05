@@ -14,6 +14,7 @@ import { Outlet } from "react-router-dom";
 import Roaming from "./pages/services/roaming-services/Roaming.jsx";
 import VasSelection from "./pages/services/value-added-services/VasSelection.jsx";
 import Chat from "./pages/chat/Chat.jsx";
+import Profile from "./pages/Profile.jsx";
 
 
 const routes = [
@@ -47,7 +48,7 @@ const routes = [
 			},
 			{
 				path: "/profile",
-				element: <></>,
+				element: <Profile />,
 			},
 			{
 				path: "/support",
