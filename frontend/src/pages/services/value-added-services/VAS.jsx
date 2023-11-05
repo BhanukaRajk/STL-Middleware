@@ -1,9 +1,5 @@
+// TODO:  NOT USED IN HERE
 import Banner from "../../../components/Common/Banner";
-// import News from "../../../components/VAS/News";
-// import Sport from "../../../components/VAS/Sport";
-// import Gaming from "../../../components/VAS/Gaming";
-// import RoamingPackages from "../../../components/Roaming/RoamingPackages";
-// import CountryDetails from "../../../components/Roaming/CountryDetails";
 import Footer from "../../../components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
@@ -21,11 +17,6 @@ const ValueAddedServices = () => {
         <div>
             <Banner data={VasBanner} />
             <Outlet />
-            {/* <News />
-            <Sport />
-            <Gaming />
-            <RoamingPackages />
-            <CountryDetails /> */}
             <Footer />
         </div>
     );

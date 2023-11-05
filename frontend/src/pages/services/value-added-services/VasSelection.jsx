@@ -1,9 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { Tabs } from 'antd';
 import Sport from '../../../components/VAS/Sport';
 import News from '../../../components/VAS/News';
 import Games from '../../../components/VAS/Gaming';
 import Videos from '../../../components/VAS/Video';
+import Footer from "../../../components/Footer/Footer";
 
 
 const VasSelection = () => {
@@ -42,12 +44,15 @@ const VasSelection = () => {
 
 
     return (
-        <Tabs
-            defaultActiveKey="1"
-            centered
-            items={items}
-            onChange={onChange}
-        />
+        <>
+            <Tabs
+                defaultActiveKey="1"
+                centered
+                items={items}
+                onChange={onChange}
+            />
+            <Footer />
+        </>
     )
 }
 
