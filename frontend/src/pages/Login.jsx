@@ -5,7 +5,7 @@ import useUser from "../hooks/useUser";
 
 const Login = () => {
 	const navigate = useNavigate();
-	const { setUser } = useUser();
+	const { setUserContext } = useUser();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -18,7 +18,7 @@ const Login = () => {
 		if (token) {
 			localStorage.setItem("token", token);
 			const user = jwtDecode(token);
-			setUser(user);
+			setUserContext(user);
 
 			navigate("/");
 		} else {
