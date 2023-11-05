@@ -3,6 +3,7 @@ import { Tabs } from 'antd';
 import Sport from '../../../components/VAS/Sport';
 import News from '../../../components/VAS/News';
 import Games from '../../../components/VAS/Gaming';
+import Videos from '../../../components/VAS/Video';
 
 
 const VasSelection = () => {
@@ -26,7 +27,7 @@ const VasSelection = () => {
         {
             key: "4",
             label: "Video",
-            children: <Games />,
+            children: <Videos />,
         },
         {
             key: "5",
@@ -50,4 +51,4 @@ const VasSelection = () => {
     )
 }
 
-export default VasSelection
+export default VasSelection;
