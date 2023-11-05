@@ -31,11 +31,6 @@ export const signup = async (firstName, lastName, phoneNo, email, password) => {
     }
 };
 
-export const logout = async () => {
-    localStorage.removeItem('token');
-    window.location.href = '/login';
-}
-
 export const testAuth = async () => {
     try {
         const response = await apiTelco.get('/auth/test');
