@@ -13,6 +13,7 @@ apiTelco.interceptors.request.use(
         if (token) {
             request.headers.Authorization = `Bearer ${token}`;
         }
+
         return request;
     }
 ); // Request interceptor
