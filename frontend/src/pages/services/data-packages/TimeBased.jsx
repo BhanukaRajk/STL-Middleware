@@ -12,13 +12,10 @@ const TimeBased = ({ planName, price, duration, packageSize, speed }) => {
                 <h5>Rs. {price} + tax</h5>
                 <p className='inline-block'><TiStopwatch className='inline-block mb-1 mr-2 text-2xl' />{duration}</p>
             </div>
-            {/* <div className="data-size">
-                <p><LiaFastBackwardSolid className='inline-block mb-2 mr-3' />{speed} Mbps (Speed)</p>
-            </div> */}
             <div className="description">
                 <p>No speed limited up to 1 GB. </p>
-                <p>512 kbps Speed limit after {price/8} GB to {price/12} GB.</p>
-                <p>64 kbps Speed limit after {price/20} GB until the package validate expiry.</p>
+                <p>512 kbps Speed limit after 2 GB to 4 GB.</p>
+                <p>64 kbps Speed limit after 8 GB until the package validate expiry.</p>
             </div>
             <div className="activate">
                 <button>Activate</button>
