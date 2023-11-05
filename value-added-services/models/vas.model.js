@@ -2,10 +2,6 @@ import mongoose from "mongoose";
 import Service from "./service.model.js";
 
 const vasSchema = new mongoose.Schema({
-    price: {
-        type: Number,
-        required: true
-    },
     description: {
         type: String,
         required: true

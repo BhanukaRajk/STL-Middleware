@@ -1,20 +1,16 @@
 import mongoose from "mongoose";
-import Service from "./service.model.js";
+import Service from './service.model.js';
 
-const dataAddonsSchema = new mongoose.Schema({
-    price: {
-        type: Number,
-        required: true
-    },
+const voiceAddonsSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true
     },
-    quantity: {
+    duration: {
         type: Number,
         required: true
     },
-    duration: { // in days
+    duration: {
         type: Number,
         required: true
     },
@@ -25,6 +21,5 @@ const dataAddonsSchema = new mongoose.Schema({
     }
 });
 
-
-const DataAddons = mongoose.model('DataAddons', dataAddonsSchema);
-export default DataAddons;
+const VoiceAddons = mongoose.model('VoiceAddons', voiceAddonsSchema);
+export default VoiceAddons;

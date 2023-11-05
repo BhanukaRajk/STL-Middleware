@@ -2,10 +2,6 @@ import mongoose from "mongoose";
 import Service from "./service.model.js";
 
 const ringingTonesSchema = new mongoose.Schema({
-    price: {
-        type: Number,
-        required: true
-    },
     name: {
         type: String,
         required: true
