@@ -5,7 +5,7 @@ import './chat.css'
 const SenderMessage = ({SendMessageText}) => {
     return (
         <div className="sender-side">
-            <div className="message">
+            <div className="message text-white">
                 <p>{SendMessageText}</p>
             </div>
         </div>
