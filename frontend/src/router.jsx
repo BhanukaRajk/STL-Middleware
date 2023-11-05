@@ -18,6 +18,7 @@ import News from "./components/VAS/News.jsx";
 import Games from "./components/VAS/Gaming.jsx";
 import RoamingPackages from "./components/Roaming/RoamingPackages.jsx";
 import VasSelection from "./pages/services/value-added-services/VasSelection.jsx";
+import Chat from "./pages/chat/Chat.jsx";
 
 
 const routes = [
@@ -52,6 +53,10 @@ const routes = [
 			{
 				path: "/profile",
 				element: <></>,
+			},
+			{
+				path: "/support",
+				element: <Chat />,
 			},
 			{
 				path: "/services",

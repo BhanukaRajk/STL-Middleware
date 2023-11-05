@@ -1,6 +1,5 @@
 .chat {
     display: grid;
-    grid-template-columns: 75% auto;
     height: 100vh;
     column-gap: 5px;
     overflow: hidden;
@@ -37,7 +36,7 @@
 
 .chat-body {
     background: #0E0E1A;
-    height: 75vh;
+    height: 60vh;
     overflow-y: scroll;
     border: 2px solid #0693F3;
     border-top: none;
