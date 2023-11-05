@@ -54,7 +54,6 @@ const Sport = () => {
 			try {
 				const response = await getSportServices();
 				setServices(response.data);
-                console.log(response.data);
 			} catch (error) {
 				console.error(error);
 			}
