@@ -7,10 +7,6 @@ const roamingSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    price: {
-        type: Number,
-        required: true
-    },
     code: {
         type: String,
         required: true
