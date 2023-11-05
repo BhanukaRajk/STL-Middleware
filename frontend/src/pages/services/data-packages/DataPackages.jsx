@@ -5,6 +5,7 @@ import { FaSyncAlt } from 'react-icons/fa'
 import { BiTimeFive } from 'react-icons/bi'
 import UnlimitedPack from './unlimitedPack'
 import { addDataPackage } from '../../../api/dataPackagesApi'
+import TimeBased from './TimeBased'
 
 const DataPackages = () => {
 
@@ -116,12 +117,19 @@ const DataPackages = () => {
                     }
                 </div>
 
-                {/* <div className="one-pack">
+                <div className="one-pack mb-[50px]">
                     <h3>Anytime unlimited</h3>
-                    <UnlimitedPack planName={'Unlimited Pack 1'} price={'1000'} duration={'30 days'} packageSize={'100'} />
-                    <UnlimitedPack planName={'Unlimited Pack 1'} price={'1000'} duration={'30 days'} packageSize={'100'} />
-                    <UnlimitedPack planName={'Unlimited Pack 1'} price={'1000'} duration={'30 days'} packageSize={'100'} />
-                </div> */}
+                    <UnlimitedPack planName={'Youtube'} price={'1000'} duration={'30 days'} packageSize={'100'} speed={'2'} />
+                    <UnlimitedPack planName={'Fun Blaster'} price={'2500'} duration={'30 days'} packageSize={'100'} speed={'5'}/>
+                    <UnlimitedPack planName={'FB/WhatsApp'} price={'5000'} duration={'30 days'} packageSize={'100'} speed={'10'}/>
+                </div>
+
+                <div className="one-pack mb-[50px]">
+                    <h3>Time based</h3>
+                    <TimeBased planName={'Time based'} price={'24'} duration={'1 hours'} packageSize={'100'} speed={'2'} />
+                    <TimeBased planName={'Time based'} price={'72'} duration={'4 hours'} packageSize={'100'} speed={'5'}/>
+                    <TimeBased planName={'Time based'} price={'120'} duration={'2 days'} packageSize={'100'} speed={'10'}/>
+                </div>
 
             </div>
 
