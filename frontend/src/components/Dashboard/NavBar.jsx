@@ -2,9 +2,11 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import useDrawer from "../../hooks/useDrawer";
 import { testAuth } from "../../api/authApi";
+import useUser from "../../hooks/useUser";
 
 const NavBar = () => {
 	const { openDrawer } = useDrawer();
+	const { setUser } = useUser();
 
 	const handleNotificationClick = async () => {
 		await testAuth();
@@ -12,8 +14,8 @@ const NavBar = () => {
 
 	const handleLogout = () => {
 		localStorage.removeItem("token");
+		setUser(null);
 		window.location.reload();
-		window.location.href = "/login";
 	};
 
 	return (
