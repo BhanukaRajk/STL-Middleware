@@ -22,4 +22,5 @@ const ringingTonesSchema = new mongoose.Schema({
 
 });
 
-export default RingingTones = mongoose.model('RingingTones', ringingTonesSchema);
+const RingingTones = mongoose.model('RingingTones', ringingTonesSchema);
+export default RingingTones;

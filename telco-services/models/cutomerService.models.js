@@ -31,4 +31,5 @@ const customerServiceSchema = new mongoose.Schema({
     }
 });
 
-export default CustomerService = mongoose.model('CustomerService', customerServiceSchema);
+const CustomerService = mongoose.model('CustomerService', customerServiceSchema);
+export default CustomerService;
