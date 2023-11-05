@@ -12,4 +12,5 @@ const gamingSchema = new mongoose.Schema({
     }
 });
 
-export default Gaming = mongoose.model('Gaming', gamingSchema);
+const Gaming = mongoose.model('Gaming', gamingSchema);
+export default Gaming;

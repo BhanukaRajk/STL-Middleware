@@ -25,4 +25,6 @@ const dataAddonsSchema = new mongoose.Schema({
     }
 });
 
-export default DataAddons = mongoose.model('DataAddons', dataAddonsSchema);
+
+const DataAddons = mongoose.model('DataAddons', dataAddonsSchema);
+export default DataAddons;

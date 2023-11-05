@@ -25,4 +25,5 @@ const voiceAddonsSchema = new mongoose.Schema({
     }
 });
 
-export default VoiceAddons = mongoose.model('VoiceAddons', voiceAddonsSchema);
+const VoiceAddons = mongoose.model('VoiceAddons', voiceAddonsSchema);
+export default VoiceAddons;

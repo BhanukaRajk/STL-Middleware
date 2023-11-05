@@ -21,4 +21,5 @@ const vasSchema = new mongoose.Schema({
     }
 });
 
-export default VAS = mongoose.model('VAS', vasSchema);
+const VAS = mongoose.model('VAS', vasSchema);
+export default VAS;

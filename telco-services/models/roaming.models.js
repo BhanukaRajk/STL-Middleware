@@ -22,4 +22,5 @@ const roamingSchema = new mongoose.Schema({
     }
 });
 
-export default Roaming = mongoose.model('Roaming', roamingSchema);
+const Roaming = mongoose.model('Roaming', roamingSchema);
+export default Roaming;
