@@ -1,6 +1,6 @@
 import { Progress } from "antd";
 
-const ProgressSet = ({ precent, all, save, title }) => {
+const ProgressSet = ({ percent, all, save, title }) => {
 	const twoColors = {
 		"0%": "#001F54",
 		"100%": "#001F54",
@@ -13,7 +13,7 @@ const ProgressSet = ({ precent, all, save, title }) => {
 					{save} / {all} GB
 				</h2>
 			</div>
-			<Progress percent={precent} strokeColor={twoColors} />
+			<Progress percent={percent} strokeColor={twoColors} />
 		</div>
 	);
 };
