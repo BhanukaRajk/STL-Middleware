@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Service from "./service.model.js";
 
 const dataAddonsSchema = new mongoose.Schema({
     description: {
@@ -14,11 +13,10 @@ const dataAddonsSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    service_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: Service,
+    price: {
+        type: Number,
         required: true
-    }
+    },
 });
 
 
