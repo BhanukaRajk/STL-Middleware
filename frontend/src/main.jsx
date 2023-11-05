@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { DrawerProvider } from "./contexts/DrawerContext.jsx";
+import UserProvider from "./contexts/UserContext.jsx";
 
 const theme = extendTheme({
 	fonts: {
@@ -14,10 +15,12 @@ const theme = extendTheme({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<DrawerProvider>
-			<ChakraProvider theme={theme}>
-				<App />
-			</ChakraProvider>
-		</DrawerProvider>
+		<UserProvider>
+			<DrawerProvider>
+				<ChakraProvider theme={theme}>
+					<App />
+				</ChakraProvider>
+			</DrawerProvider>
+		</UserProvider>
 	</React.StrictMode>
 );

@@ -2,25 +2,22 @@ import { CaretRightOutlined } from '@ant-design/icons';
 import { Collapse, theme } from 'antd';
 import PropTypes from 'prop-types';
 
-
 const getItems = (panelStyle, data) => [
     {
         key: '1',
-        label: data.category.service,
+        label: "data.category.service",
         children:
-            data.options.map((item, index) => (
+            data.map((item, index) => (
                 <div key={index} className='flex flex-col px-5 py-3 mb-8 border rounded-md' >
-                    <div><img src={`${item.logo}`} alt="Logo" className='w-10 h-10 rounded-xl'/></div>
+                    <div><img src={`${item.logo}`} alt="Logo" className='w-10 h-10 rounded-xl' /></div>
                     <div className="font-bold text-lg my-5">{item.name}</div>
                     <div className="my-2">
                         <div className="font-semibold">Charges:</div>
-                        <div className="mx-2">{item.daily}</div>
-                        <div className="mx-2">{item.monthly}</div>
+                        <div className="mx-2">{item.price}</div>
                     </div>
                     <div className="my-2">
-                        <div className="font-semibold">To activate:</div>
-                        <div className="mx-2">{item.dact}</div>
-                        <div className="mx-2">{item.mact}</div>
+                        <div className="font-semibold">More Info:</div>
+                        <div className="mx-2">{item.description}</div>
                     </div>
                     <div className="my-2">
                         <div className="font-semibold">To deactivate:</div>
@@ -28,9 +25,11 @@ const getItems = (panelStyle, data) => [
                         <div className="mx-2">{item.mdeact}</div>
                     </div>
                     <div>
-                        <button className='px-5 py-2 my-5 rounded-md bg-blue-800 text-white'>
-                            Activate
-                        </button>
+                        <form>
+                            <button className='px-5 py-2 my-5 rounded-md bg-blue-800 text-white'>
+                                Activate
+                            </button>
+                        </form>
                     </div>
                 </div>
             )),
@@ -38,9 +37,14 @@ const getItems = (panelStyle, data) => [
     },
 ];
 
+
+
+
 const ServiceCategory = ({ data }) => {
 
-    if (data) {
+    console.log(data);
+
+    if (data.length > 0) {
         const { token } = theme.useToken();
         const panelStyle = {
             marginBottom: 24,
@@ -63,7 +67,7 @@ const ServiceCategory = ({ data }) => {
     } else {
         return (
             <>
-                <div>Noting to show</div>
+                <div className='w-full h-screen text-xl font-semibold text-center flex items-center justify-center'>No services available</div>
             </>
         )
     }
